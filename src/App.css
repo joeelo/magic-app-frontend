@@ -1,5 +1,5 @@
 body {
-  background-color: lightpink;
+  background-color: #ffdde2;
 }
 
 nav {
@@ -15,5 +15,18 @@ nav button {
   padding: 10px;
   background-color: white;
   font-size: 18px;
+}
+
+.card-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card-grid .magic-card {
+  width: 20%;
+  margin: 10px;
 }
 /*# sourceMappingURL=App.css.map */

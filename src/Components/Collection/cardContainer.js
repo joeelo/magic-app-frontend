@@ -5,31 +5,29 @@ class cardContainer extends Component {
 
   state = {
     formValue: "",
+    isSubmitted: false,
+    cards: [] 
   }
 
-  componentDidMount() {
-
+  
+  foundCards = (cards) => {
+    return this.state.cards.filter(card => !!card.imageUrl).map((card, index) => <MTGcard key={index} card={card} />)
   }
-
-  foundCards = (objects) => {
-    const cards = objects.forEach(obj => console.log(obj.name))
-    return cards;
-  }
-
-
+  
   formHandler = async (event) => {
     event.preventDefault();
+    this.setState({isSubmitted: true});
     let url = `http://localhost:3000/collection/?name=${this.state.formValue}`
     console.log(url);
     try {
       const response = await fetch(url) 
       const json = await response.json();
-      this.foundCards(json);
+      await this.setState({cards: json});
     } catch (error) {
       console.log(error);
     }
   }
-
+  
   changeHandler = (event) => {
     this.setState({
       formValue: event.target.value
@@ -39,20 +37,19 @@ class cardContainer extends Component {
   render() {
     return (
       <div>
-        <p>  "i'm connected!" </p>
         <p> { this.state.formValue }</p>
         <form onSubmit={this.formHandler}> 
-
           <label>Card Name</label>
           <input 
             type="text" 
-            // value={this.state.formValue}
+            value={this.state.formValue}
             onChange={this.changeHandler}
           />
           <button>Submit</button>
-
         </form>
-        <MTGcard/>
+        <div className="card-grid"> 
+          {this.state.isSubmitted ? this.foundCards(this.state.cards) : null}
+        </div>
     </div>
     )
   }
