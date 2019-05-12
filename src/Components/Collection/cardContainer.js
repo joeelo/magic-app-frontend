@@ -5,18 +5,17 @@ class cardContainer extends Component {
 
   state = {
     formValue: "",
-    isSubmitted: false,
+    searchIndex: false,
     cards: [] 
   }
 
-  
   foundCards = (cards) => {
     return this.state.cards.filter(card => !!card.imageUrl).map((card, index) => <MTGcard key={index} card={card} />)
   }
   
   formHandler = async (event) => {
     event.preventDefault();
-    this.setState({isSubmitted: true});
+    this.setState({searchIndex: this.state.searchIndex + 1 });
     let url = `http://localhost:3000/collection/?name=${this.state.formValue}`
     console.log(url);
     try {
@@ -48,7 +47,7 @@ class cardContainer extends Component {
           <button>Submit</button>
         </form>
         <div className="card-grid"> 
-          {this.state.isSubmitted ? this.foundCards(this.state.cards) : null}
+          {this.state.searchIndex > 0 ? this.foundCards(this.state.cards) : null}
         </div>
     </div>
     )

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link, BrowserRouter as Router} from "react-router-dom"; 
+import { Route, BrowserRouter as Router} from "react-router-dom"; 
 import './App.css';
 import Nav from "./Components/Nav/Nav";
 import UserProfile from "./Components/UserProfile/UserLayout";
@@ -17,7 +17,7 @@ class App extends Component {
           <Nav/>
           
           <Route exact path="/user" render={(props) => (<UserProfile {...props} props={props}/>) }/>
-          <Route exact path="/collection" render={(props) => (<CardContainer props={props} />)} />
+          <Route path="/collection" render={(props) => (<CardContainer props={props} />)} />
 
         </div>
       </Router>

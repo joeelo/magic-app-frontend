@@ -1,5 +1,7 @@
 body {
-  background-color: #ffdde2;
+  background: lightblue;
+  min-width: 100vh;
+  min-height: 100vh;
 }
 
 nav {
@@ -23,10 +25,15 @@ nav button {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .card-grid .magic-card {
-  width: 20%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   margin: 10px;
 }
 /*# sourceMappingURL=App.css.map */

@@ -1,5 +1,7 @@
 body {
-  background-color: rgb(255, 221, 226);
+  background: lightblue;
+  min-width: 100vh;
+  min-height: 100vh;
 }
 
 nav {
@@ -15,8 +17,9 @@ nav {
 .card-grid {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
     .magic-card {
-      width: 20%;
+      flex-grow: 1;
       margin: 10px;
     }
 }

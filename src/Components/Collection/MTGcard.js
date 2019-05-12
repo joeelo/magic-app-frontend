@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
+// import { Link } from "react-router-dom"
 
 class MTGcard extends Component {
-    render() {
 
+    render() {
         const { card } = this.props
-        console.log(card.imageUrl)
+        const href = `https://gatherer.wizards.com/pages/card/Details.aspx?multiverseid=${card.multiverseid}`;
         return (
-            <div className="magic-card">
-                {card.name}    
-                <img alt="" src={card.imageUrl}/>
+
+            <div className="magic-card">   
+                    <img alt="" src={card.imageUrl}/><br/>
+                    <a href={href} target="_blank" rel="noopener noreferrer"> Rulings </a>
+                    <button> own </button>
             </div>
         );
     }
