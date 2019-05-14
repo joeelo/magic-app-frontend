@@ -7,7 +7,13 @@ import CardContainer from "./Components/Collection/cardContainer"
 
 class App extends Component {
 
+  state = {
+    visible: false
+  }
 
+  changeVisible = () => {
+    alert("connected");
+  }
 
   render() {
     return (
@@ -16,8 +22,8 @@ class App extends Component {
 
           <Nav/>
           
-          <Route exact path="/user" render={(props) => (<UserProfile {...props} props={props}/>) }/>
-          <Route exact path="/collection" render={(props) => (<CardContainer props={props} />)} />
+          <Route exact path="/user" render={(props) => (<UserProfile {...props} />) }/>
+          <Route exact path="/collection" render={(props) => (<CardContainer props={this.state} changeVisible={this.changeVisible} />)} />
 
         </div>
       </Router>

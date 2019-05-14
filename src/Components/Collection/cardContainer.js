@@ -1,8 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
+import MTGCard from "./mtgCard"
 
 const cardContainer = (props) => {
+  console.log(props);
   return (
-    <div> "i'm connected!" </div>
+    <div> 
+      <button onClick={props.changeVisible}> I'm a button </button>
+      <MTGCard /> 
+    </div>
   )
 }
 export default cardContainer
