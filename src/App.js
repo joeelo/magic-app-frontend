@@ -4,10 +4,9 @@ import './App.css';
 import Nav from "./Components/Nav/Nav";
 import UserProfile from "./Components/UserProfile/UserLayout";
 import CardContainer from "./Components/Collection/cardContainer"
+import CompetitiveScreen from "./Components/Competitive/CompetitiveScreen"
 
 class App extends Component {
-
-
 
   render() {
     return (
@@ -18,6 +17,7 @@ class App extends Component {
           
           <Route exact path="/user" render={(props) => (<UserProfile {...props} props={props}/>) }/>
           <Route path="/collection" render={(props) => (<CardContainer props={props} />)} />
+          <Route path="/competitivegame" render={(props) => (<CompetitiveScreen props={props} />) }/>
 
         </div>
       </Router>

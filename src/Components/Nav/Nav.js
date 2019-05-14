@@ -8,6 +8,7 @@ export default class Nav extends Component {
         <nav>
           <Link to="/"><button> Home </button></Link>
           <Link to="/collection"> <button> Search </button> </Link>
+          <Link to="competitivegame"> <button> Compete </button> </Link>
         </nav>
       </div>
     )
