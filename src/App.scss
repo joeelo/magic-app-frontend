@@ -1,5 +1,7 @@
 body {
-  background-color: lightpink;
+  background: lightblue;
+  min-width: 100vh;
+  min-height: 100vh;
 }
 
 nav {
@@ -8,7 +10,45 @@ nav {
     button {
       padding: 10px;
       background-color: white;
-      opacity: .5;
       font-size: 18px;
     }
 }
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+    .magic-card {
+      flex-grow: 1;
+      margin: 10px;
+    }
+}
+
+.scale-grid {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+    .scale {
+      display: flex;
+      width: 100vw; 
+      justify-content: center;
+      height: 15vh;
+      align-items: center;
+      .coral-bg { background: coral};
+      .scale-label {
+        display: flex;
+        justify-content: center;
+      }
+      .will-buttons {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: white;
+        color: black;
+        width: 80vw;
+      }
+    }
+}
+

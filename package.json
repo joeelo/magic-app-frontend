@@ -7,7 +7,7 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
-    "sass": "^1.19.0"
+    "sass": "^1.20.1"
   },
   "scripts": {
     "start": "react-scripts start",

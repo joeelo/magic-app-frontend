@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Route, Link, BrowserRouter as Router} from "react-router-dom"; 
+import { Route, BrowserRouter as Router} from "react-router-dom"; 
 import './App.css';
 import Nav from "./Components/Nav/Nav";
 import UserProfile from "./Components/UserProfile/UserLayout";
 import CardContainer from "./Components/Collection/cardContainer"
+import CompetitiveScreen from "./Components/Competitive/CompetitiveScreen"
 
 class App extends Component {
 
@@ -22,8 +23,9 @@ class App extends Component {
 
           <Nav/>
           
-          <Route exact path="/user" render={(props) => (<UserProfile {...props} />) }/>
-          <Route exact path="/collection" render={(props) => (<CardContainer props={this.state} changeVisible={this.changeVisible} />)} />
+          <Route exact path="/user" render={(props) => (<UserProfile {...props} props={props}/>) }/>
+          <Route path="/collection" render={(props) => (<CardContainer props={props} />)} />
+          <Route path="/competitivegame" render={(props) => (<CompetitiveScreen props={props} />) }/>
 
         </div>
       </Router>
