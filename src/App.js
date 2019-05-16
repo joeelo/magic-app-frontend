@@ -8,6 +8,14 @@ import CompetitiveScreen from "./Components/Competitive/CompetitiveScreen"
 
 class App extends Component {
 
+  state = {
+    visible: false
+  }
+
+  changeVisible = () => {
+    alert("connected");
+  }
+
   render() {
     return (
       <Router>
