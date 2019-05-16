@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import MoodStatement from './MoodStatement';
-import ColoredDiv from "./ColoredDiv"
 
 class Scale extends Component {
 
     state = {
         mood: 1,
-        background: [""]
+        backgroundColor: "light-blue-gradient" 
     }
 
     removeFromScale = () => {
@@ -23,15 +22,15 @@ class Scale extends Component {
                 mood: this.state.mood + 1
             })
         }
-    }
+    } 
 
     backgroundClass = () => {
         switch(this.state.mood) {
-            case 1 || 2 || 3 : this.setState({background: "light-blue-gradient"}) 
+            case 1 || 2 || 3 : this.setState({backgroundColor: "light-blue-gradient"}) 
                 break;
-            case 4 || 5 || 6 : this.setState({background: "dark-blue-gradient"})
+            case 4 || 5 || 6 : this.setState({backgroundColor: "dark-blue-gradient"})
                 break; 
-            case 7 || 8 || 9 : this.setState({background: "dark-red-gradient"});
+            case 7 || 8 || 9 : this.setState({backgroundColor: "dark-red-gradient"});
                 break; 
             default: 
                 return null;
@@ -39,12 +38,11 @@ class Scale extends Component {
     }
 
     render() {
-        console.log(<ColoredDiv />)
         const { player } = this.props
         return (
 
             
-        <div className="scale ">
+        <div className={`${this.state.backgroundColor} scale`}>
             <p>{player.name} </p>
             <div className="will-buttons"> 
                 <button onClick={this.removeFromScale}> Will </button>

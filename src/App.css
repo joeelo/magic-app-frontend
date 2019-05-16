@@ -37,14 +37,24 @@ nav button {
   margin: 10px;
 }
 
+.light-blue-gradient {
+  background: linear-gradient(38deg, #c1e2ff 0%, #b7b7ff 31%, #00d4ff 100%);
+}
+
+.dark-blue-gradient {
+  background: linear-gradient(38deg, #4d779b 0%, #2d2d61 31%, #293436 100%);
+}
+
+.dark-red-gradient {
+  background: linear-gradient(38deg, #e72b2b 0%, #a15050 31%, black 84%);
+}
+
 .scale-grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100vw;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -webkit-box-align: center;
@@ -53,9 +63,8 @@ nav button {
 }
 
 .scale-grid .scale {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
   width: 100vw;
   -webkit-box-pack: center;
       -ms-flex-pack: center;

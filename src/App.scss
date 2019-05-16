@@ -24,14 +24,20 @@ nav {
     }
 }
 
+.light-blue-gradient {background: linear-gradient(38deg, rgba(193,226,255,1) 0%, rgb(183, 183, 255) 31%, rgba(0,212,255,1) 100%);}
+.dark-blue-gradient {background: linear-gradient(38deg, rgb(77, 119, 155) 0%, rgb(45, 45, 97) 31%, rgb(41, 52, 54) 100%);}
+.dark-red-gradient {background: linear-gradient(38deg, rgba(231,43,43,1) 0%, rgba(161,80,80,1) 31%, rgba(0,0,0,1) 84%);}
+
+
+
 .scale-grid {
-  display: flex;
-  width: 100vw;
-  justify-content: center;
+  display: grid;
+  text-align: center;
+  justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
     .scale {
-      display: flex;
+      display: grid;
       width: 100vw; 
       justify-content: center;
       height: 15vh;
