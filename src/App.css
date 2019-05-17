@@ -21,14 +21,14 @@ nav {
 
 .scale-grid {
   display: grid;
-  grid-template-rows: 1fr;
-  width: 100vw;
-  justify-content: center;
+  text-align: center;
+  justify-content: space-around;
   flex-wrap: wrap;
   align-items: center; }
   .scale-grid .scale {
     display: grid;
     width: 100vw;
+    margin-bottom: 10px;
     justify-content: center;
     text-align: center;
     height: 15vh;
@@ -45,5 +45,14 @@ nav {
       background-color: white;
       color: black;
       width: 80vw; }
+
+.light-blue-gradient {
+  background: linear-gradient(38deg, #c1e2ff 0%, #b7b7ff 31%, #00d4ff 100%); }
+
+.dark-blue-gradient {
+  background: linear-gradient(38deg, #4d779b 0%, #2d2d61 31%, #293436 100%); }
+
+.dark-red-gradient {
+  background: linear-gradient(38deg, #e72b2b 0%, #a15050 31%, black 84%); }
 
 /*# sourceMappingURL=App.css.map */

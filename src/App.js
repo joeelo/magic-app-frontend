@@ -5,6 +5,7 @@ import Nav from "./Components/Nav/Nav";
 import UserProfile from "./Components/UserProfile/UserLayout";
 import CardContainer from "./Components/Collection/cardContainer"
 import CompetitiveScreen from "./Components/Competitive/CompetitiveScreen"
+import SignUpForm from "./Components/Forms/SignUpForm"
 
 class App extends Component {
 
@@ -26,6 +27,7 @@ class App extends Component {
           <Route exact path="/user" render={(props) => (<UserProfile {...props} props={props}/>) }/>
           <Route path="/collection" render={(props) => (<CardContainer props={props} />)} />
           <Route path="/competitivegame" render={(props) => (<CompetitiveScreen props={props} />) }/>
+          <Route exact pather="/sign-up" render={(props) => (<SignUpForm props={props} />) } />
 
         </div>
       </Router>
