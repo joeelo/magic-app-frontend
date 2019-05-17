@@ -15,6 +15,9 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; }
+  .card-grid img {
+    width: 223px;
+    height: 310px; }
   .card-grid .magic-card {
     flex-grow: 1;
     margin: 10px; }

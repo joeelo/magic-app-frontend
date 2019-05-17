@@ -18,6 +18,10 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+    img {
+      width: 223px;
+      height: 310px; 
+    }
     .magic-card {
       flex-grow: 1;
       margin: 10px;

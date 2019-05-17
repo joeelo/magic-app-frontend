@@ -17,19 +17,20 @@ class SignUpForm extends Component {
     formSubmitHandler = async (event) => {
         event.preventDefault();
         const userObj = {
-            name: this.state.name,
-            email: this.state.email,
-            password: this.state.password
+            name: this.state.name.toString(),
+            email: this.state.email.toString(),
+            password: this.state.password.toString()
         }
 
-         fetch("https://localhost:3000/users", {
+         fetch("http://localhost:3000/users", {
             method: "POST",
             headers: {
                 "Accept": "application/json",
                 "Content-Type": "application/json"
             }, 
             body: JSON.stringify(userObj)
-        }).then(res => res.json())
+        })
+        .then(res => res.json())
         .then(data => console.log(data))
         
 
