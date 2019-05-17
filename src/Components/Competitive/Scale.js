@@ -5,7 +5,13 @@ class Scale extends Component {
 
     state = {
         mood: 1,
-        backgroundColor: "light-blue-gradient" 
+        backgroundColor: "" 
+    }
+
+    componentDidUpdate(prevProps, prevState){
+        if (prevState.mood !== this.state.mood) {
+         this.backgroundClass();
+        }
     }
 
     removeFromScale = () => {
@@ -25,20 +31,27 @@ class Scale extends Component {
     } 
 
     backgroundClass = () => {
-        switch(this.state.mood) {
-            case 1 || 2 || 3 : this.setState({backgroundColor: "light-blue-gradient"}) 
-                break;
-            case 4 || 5 || 6 : this.setState({backgroundColor: "dark-blue-gradient"})
-                break; 
-            case 7 || 8 || 9 : this.setState({backgroundColor: "dark-red-gradient"});
-                break; 
-            default: 
-                return null;
+        if (this.state.mood === 1 || this.state.mood === 2 || this.state.mood === 3) {
+            this.setState({
+                backgroundColor: "light-blue-gradient"
+            })
+            return; 
+        } else if (this.state.mood === 4 || this.state.mood === 5 || this.state.mood === 6) {
+            this.setState({
+                backgroundColor: "dark-blue-gradient"
+            })     
+            return;    
+        } else if (this.state.mood === 7 || this.state.mood === 8 || this.state.mood === 9) {
+            this.setState({
+                backgroundColor: "dark-red-gradient"
+            })
+            return;
         }
     }
 
     render() {
         const { player } = this.props
+        console.log(this.state.backgroundColor);
         return (
 
             

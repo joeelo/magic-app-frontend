@@ -66,6 +66,7 @@ nav button {
   display: -ms-grid;
   display: grid;
   width: 100vw;
+  margin-bottom: 10px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
