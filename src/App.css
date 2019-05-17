@@ -46,6 +46,12 @@ nav {
       color: black;
       width: 80vw; }
 
+.sign-up-form-component {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 80vh; }
+
 .light-blue-gradient {
   background: linear-gradient(38deg, #c1e2ff 0%, #b7b7ff 31%, #00d4ff 100%); }
 

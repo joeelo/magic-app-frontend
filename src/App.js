@@ -27,7 +27,7 @@ class App extends Component {
           <Route exact path="/user" render={(props) => (<UserProfile {...props} props={props}/>) }/>
           <Route path="/collection" render={(props) => (<CardContainer props={props} />)} />
           <Route path="/competitivegame" render={(props) => (<CompetitiveScreen props={props} />) }/>
-          <Route exact pather="/sign-up" render={(props) => (<SignUpForm props={props} />) } />
+          <Route exact path="/sign-up" render={(props) => (<SignUpForm props={props} />) } />
 
         </div>
       </Router>
