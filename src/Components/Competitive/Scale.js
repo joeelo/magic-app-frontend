@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import MoodStatement from './MoodStatement';
-import ColoredDiv from "./ColoredDiv"
 
 class Scale extends Component {
 
@@ -39,7 +38,6 @@ class Scale extends Component {
     }
 
     render() {
-        console.log(<ColoredDiv />)
         const { player } = this.props
         return (
 

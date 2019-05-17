@@ -25,15 +25,17 @@ nav {
 }
 
 .scale-grid {
-  display: flex;
+  display: grid;
+  grid-template-rows: 1fr;
   width: 100vw;
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
     .scale {
-      display: flex;
+      display: grid;
       width: 100vw; 
       justify-content: center;
+      text-align: center;
       height: 15vh;
       align-items: center;
       .coral-bg { background: coral};
