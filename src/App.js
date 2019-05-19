@@ -3,9 +3,10 @@ import { Route, BrowserRouter as Router} from "react-router-dom";
 import './App.css';
 import Nav from "./Components/Nav/Nav";
 import UserProfile from "./Components/UserProfile/UserLayout";
-import CardContainer from "./Components/Collection/cardContainer"
+import CardContainer from "./Components/Collection/CardContainer"
 import CompetitiveScreen from "./Components/Competitive/CompetitiveScreen"
 import SignUpForm from "./Components/Forms/SignUpForm"
+import LibraryContainer from "./Components/CardLibrary/LibraryContainer"
 
 class App extends Component {
 
@@ -28,6 +29,7 @@ class App extends Component {
           <Route path="/collection" render={(props) => (<CardContainer props={props} />)} />
           <Route path="/competitivegame" render={(props) => (<CompetitiveScreen props={props} />) }/>
           <Route exact path="/sign-up" render={(props) => (<SignUpForm props={props} />) } />
+          <Route path="/my-library" render={(props) => (<LibraryContainer props={props}/>)} />
 
         </div>
       </Router>

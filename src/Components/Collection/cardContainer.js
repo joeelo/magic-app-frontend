@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import MTGcard from "./MTGcard"
 
-class cardContainer extends Component {
+class CardContainer extends Component {
 
   state = {
     formValue: "",
@@ -54,4 +54,4 @@ class cardContainer extends Component {
   }
 }
 
-export default cardContainer
+export default CardContainer

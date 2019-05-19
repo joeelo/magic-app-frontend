@@ -4,7 +4,7 @@ class LibraryContainer extends Component {
     render() {
         return (
             <div>
-                
+                Connected;
             </div>
         );
     }
