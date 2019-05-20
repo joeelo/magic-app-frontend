@@ -16,7 +16,7 @@ class CardContainer extends Component {
   formHandler = async (event) => {
     event.preventDefault();
     this.setState({searchIndex: this.state.searchIndex + 1 });
-    let url = `http://localhost:3000/collection/?name=${this.state.formValue}`
+    let url = `http://localhost:3000/mtg-collection/?name=${this.state.formValue}`
     console.log(url);
     try {
       const response = await fetch(url) 
