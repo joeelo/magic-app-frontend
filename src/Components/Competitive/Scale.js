@@ -56,13 +56,14 @@ class Scale extends Component {
 
             
         <div className={`${this.state.backgroundColor} scale`}>
-            <p>{player.name} </p>
-            <div className="will-buttons"> 
-                <button onClick={this.removeFromScale}> Will </button>
-                    <MoodStatement mood={this.state.mood}/>
 
-                <button onClick={this.addToScale}> Whill </button>
-            </div> 
+            <div className="grid-center-info"> 
+                <p className="scale-name">{player.name} </p>
+                <MoodStatement mood={this.state.mood} className="scale-mood"/>
+            </div>
+
+            <button className="left-button" onClick={this.removeFromScale}> Will </button>
+            <button className="right-button" onClick={this.addToScale}> Whill </button>
         </div>
             
             

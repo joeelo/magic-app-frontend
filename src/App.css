@@ -24,30 +24,29 @@ nav {
 
 .scale-grid {
   display: grid;
-  text-align: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: center; }
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 50vw 50vw; }
   .scale-grid .scale {
     display: grid;
-    width: 100vw;
-    margin-bottom: 10px;
     justify-content: center;
     text-align: center;
-    height: 15vh;
-    align-items: center; }
+    height: 33vh;
+    align-items: center;
+    grid-template-columns: 100px 1fr 100px; }
+    .scale-grid .scale button {
+      padding: 10px;
+      width: 30px;
+      background-color: white;
+      color: black; }
+    .scale-grid .scale .left-button {
+      grid-column-start: 1;
+      transform: rotate(270deg); }
+    .scale-grid .scale .right-button {
+      grid-column-start: 4;
+      transform: rotate(90deg); }
     .scale-grid .scale .coral-bg {
       background: coral; }
-    .scale-grid .scale .scale-label {
-      display: flex;
-      justify-content: center; }
-    .scale-grid .scale .will-buttons {
-      display: flex;
-      justify-content: space-between;
-      padding: 10px;
-      background-color: white;
-      color: black;
-      width: 80vw; }
 
 .sign-up-form-component {
   display: grid;
